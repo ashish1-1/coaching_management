@@ -1,2 +1,1 @@
-# coaching_management
-Coaching Management System
+# Coaching Management System
