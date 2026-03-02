@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+        <menuitem id="coaching_root_menu"
+                name="Coaching Management"
+                />
+
+        <menuitem id="menu_students"
+                name="Students"
+                parent="coaching_root_menu"
+                action="action_coaching_students"
+                />
+
+        <menuitem id="menu_teachers"
+                name="Teachers"
+                parent="coaching_root_menu"
+                action="action_coaching_teachers"
+                />
+
+        <menuitem id="menu_guardians"
+                name="Guardians"
+                parent="coaching_root_menu"
+                action="action_coaching_guardians"
+                />
+
+        <menuitem id="menu_classes"
+                name="Classes"
+                parent="coaching_root_menu"
+                action="action_coaching_classes"
+                />
+
+        <menuitem id="menu_subjects"
+                name="Subjects"
+                parent="coaching_root_menu"
+                action="action_coaching_subjects"
+                />
+
+        <menuitem id="menu_exams"
+                name="Exams"
+                parent="coaching_root_menu"
+                action="action_coaching_exams"
+                />
+
+        <menuitem id="menu_coaching_fee_root"
+                name="Fees"
+                parent="coaching_root_menu"
+                sequence="40"/>
+
+                <menuitem id="menu_fee_structure"
+                        name="Fee Structures"
+                        parent="menu_coaching_fee_root"
+                        action="action_fee_structure"/>
+
+                <menuitem id="menu_student_fee"
+                        name="Student Fees"
+                        parent="menu_coaching_fee_root"
+                        action="action_student_fee"/>
+</odoo>

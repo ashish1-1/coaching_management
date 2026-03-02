@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- EXAM TREE -->
+    <record id="view_coaching_exam_tree" model="ir.ui.view">
+        <field name="name">coaching.exam.list</field>
+        <field name="model">coaching.exam</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="student_id"/>
+                <field name="year"/>
+                <field name="gpa"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- EXAM FORM -->
+    <record id="view_coaching_exam_form" model="ir.ui.view">
+        <field name="name">coaching.exam.form</field>
+        <field name="model">coaching.exam</field>
+        <field name="arch" type="xml">
+            <form string="Exam">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="student_id"/>
+                        <field name="year"/>
+                        <field name="total_marks"/>
+                        <field name="gpa"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- EXAM ACTION -->
+    <record id="action_coaching_exams" model="ir.actions.act_window">
+        <field name="name">Exams</field>
+        <field name="res_model">coaching.exam</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>

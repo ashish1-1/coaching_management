@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- CLASS TREE -->
+    <record id="view_coaching_class_tree" model="ir.ui.view">
+        <field name="name">coaching.class.list</field>
+        <field name="model">coaching.class</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="code"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- CLASS FORM -->
+    <record id="view_coaching_class_form" model="ir.ui.view">
+        <field name="name">coaching.class.form</field>
+        <field name="model">coaching.class</field>
+        <field name="arch" type="xml">
+            <form string="Class">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button type="object"
+                                name="action_coaching_students"
+                                class="oe_stat_button"
+                                icon="fa-users">
+                            <field name="student_ids" widget="statinfo" string="Students"/>
+                        </button>
+                    </div>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                    </group>
+
+                    <notebook>
+                        <page string="Subjects">
+                            <field name="subject_ids">
+                                <list editable="bottom">
+                                    <field name="name" />
+                                    <field name="teacher_id" />
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- CLASS ACTION -->
+    <record id="action_coaching_classes" model="ir.actions.act_window">
+        <field name="name">Classes</field>
+        <field name="res_model">coaching.class</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>

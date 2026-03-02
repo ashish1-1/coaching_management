@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_class_admin,Class Admin,model_coaching_class,,1,1,1,1
+access_subject_admin,Subject Admin,model_coaching_subject,,1,1,1,1
+access_exam_admin,Exam Admin,model_coaching_exam,,1,1,1,1
+
+access_coaching_fee_structure,access_coaching_fee_structure,model_coaching_fee_structure,,1,1,1,1
+access_coaching_student_fee,access_coaching_student_fee,model_coaching_student_fee,,1,1,1,1

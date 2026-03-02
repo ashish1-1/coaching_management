@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Coaching Admin -->
+    <record id="group_coaching_admin" model="res.groups">
+        <field name="name">Coaching Admin</field>
+        <field name="privilege_id" ref="base.module_category_hidden"/>
+    </record>
+
+    <!-- Coaching Teacher -->
+    <record id="group_coaching_teacher" model="res.groups">
+        <field name="name">Coaching Teacher</field>
+        <field name="privilege_id" ref="base.module_category_hidden"/>
+    </record>
+
+    <!-- Coaching Student (Portal) -->
+    <record id="group_coaching_student" model="res.groups">
+        <field name="name">Coaching Student</field>
+        <field name="privilege_id" ref="base.module_category_hidden"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_portal'))]"/>
+    </record>
+
+    <!-- Coaching Guardian (Portal) -->
+    <record id="group_coaching_guardian" model="res.groups">
+        <field name="name">Coaching Guardian</field>
+        <field name="privilege_id" ref="base.module_category_hidden"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_portal'))]"/>
+    </record>
+
+</odoo>

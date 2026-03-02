@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="rule_teacher_students" model="ir.rule">
+        <field name="name">Teacher: Read Students</field>
+        <field name="model_id" ref="base.model_res_partner"/>
+        <field name="groups" eval="[(4, ref('group_coaching_teacher'))]"/>
+        <field name="domain_force">
+            [('is_coaching_student','=',True)]
+        </field>
+    </record>
+
+    <record id="rule_teacher_exams" model="ir.rule">
+        <field name="name">Teacher: Read Exams</field>
+        <field name="model_id" ref="model_coaching_exam"/>
+        <field name="groups" eval="[(4, ref('group_coaching_teacher'))]"/>
+        <field name="domain_force">[]</field>
+    </record>
+</odoo>

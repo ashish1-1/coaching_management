@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_inherit_res_partner_form" model="ir.ui.view">
+        <field name="name">res.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='function']" position="before">
+                <field name="is_coaching_student" invisible="1"/>
+                <field name="is_coaching_teacher" invisible="1"/>
+                <field name="is_coaching_guardian" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//page[@name='sales_purchases']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='accounting']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='contact_addresses']" position="attributes">
+                <attribute name="autofocus"></attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
